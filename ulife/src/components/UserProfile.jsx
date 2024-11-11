@@ -23,25 +23,29 @@ const UserProfile = ({weight}) => {
                     />
                     <Card.Title mt="2">{user.user.name}</Card.Title>
                     <Card.Description>
-                        <div className="flex flex-col gap-2 md:gap-6">
+                        <div className="flex flex-col gap-2 md:gap-4">
                             <div className="flex items-center gap-3">
-                                <div className="bg-sky-100 w-6 h-6 md:h-10 md:w-10 rounded-full justify-center 
+                                <div className="bg-sky-100 w-6 h-6 md:h-8 md:w-8 rounded-full 
+                                justify-center 
                                 items-center flex">
-                                    <CiMail className="h-[18px] w-[18px] md:h-[26px] md:w-[26px]"/>
+                                    <CiMail className="h-[18px] w-[18px] md:h-[22px] md:w-[22px]"/>
                                 </div>
-                                <h2 className="font-semibold text-sm md:text-lg">{user.user.mail}</h2>
+                                <h2 className="font-semibold text-sm md:text-[15px]">{user.user.mail}</h2>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <div className="bg-sky-100 w-6 h-6 md:h-10 md:w-10 rounded-full justify-center 
+                            <div className="flex items-center gap-2">
+                                <div className="bg-sky-100 w-6 h-6 md:h-8 md:w-8 rounded-full 
+                                justify-center 
                                 items-center flex">
-                                    <MdOutlinePhoneInTalk className="h-[18px] w-[18px] md:h-[26px] md:w-[26px]"/>
+                                    <MdOutlinePhoneInTalk className="h-[18px] w-[18px] md:h-[22px] 
+                                    md:w-[22px]"/>
                                 </div>
                                 <h2 className="font-semibold text-sm md:text-lg">{user.user.phone}</h2>
                             </div>
                             <div className="flex items-center gap-3">
-                                <div className="bg-sky-100 w-6 h-6 md:h-10 md:w-10 rounded-full justify-center 
+                                <div className="bg-sky-100 w-6 h-6 md:h-8 md:w-8 rounded-full 
+                                justify-center 
                                 items-center flex">
-                                    <BsGenderAmbiguous className="h-[18px] w-[18px] md:h-[26px] md:w-[26px]"/>
+                                    <BsGenderAmbiguous className="h-[18px] w-[18px] md:h-[22px] md:w-[22px]"/>
                                 </div>
                                 <h2 className="font-semibold text-sm md:text-lg">{user.user.gender}</h2>
                             </div>
