@@ -1,0 +1,315 @@
+import { Button } from "@/components/ui/button"
+import {
+  DialogActionTrigger,
+  DialogBody,
+  DialogCloseTrigger,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogRoot,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+
+const Demo = () => {
+  return (
+    <DialogRoot>
+      <DialogTrigger asChild>
+        <Button variant="outline" size="sm">
+          Open Dialog
+        </Button>
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Dialog Title</DialogTitle>
+        </DialogHeader>
+        <DialogBody>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </DialogBody>
+        <DialogFooter>
+          <DialogActionTrigger asChild>
+            <Button variant="outline">Cancel</Button>
+          </DialogActionTrigger>
+          <Button>Save</Button>
+        </DialogFooter>
+        <DialogCloseTrigger />
+      </DialogContent>
+    </DialogRoot>
+  )
+}
+
+
+
+CARD
+import { Card } from "@chakra-ui/react"
+import { Avatar } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+
+const Demo = () => {
+  return (
+    <Card.Root width="320px">
+      <Card.Body gap="2">
+        <Avatar
+          src="https://picsum.photos/200/300"
+          name="Nue Camp"
+          size="lg"
+          shape="rounded"
+        />
+        <Card.Title mt="2">Nue Camp</Card.Title>
+        <Card.Description>
+          This is the card body. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Curabitur nec odio vel dui euismod fermentum.
+          Curabitur nec odio vel dui euismod fermentum.
+        </Card.Description>
+      </Card.Body>
+      <Card.Footer justifyContent="flex-end">
+        <Button variant="outline">View</Button>
+        <Button>Join</Button>
+      </Card.Footer>
+    </Card.Root>
+  )
+}
+
+
+BADGE
+import { Badge, Stack } from "@chakra-ui/react"
+
+const Demo = () => {
+  return (
+    <Stack direction="row">
+      <Badge>Default</Badge>
+      <Badge colorPalette="green">Success</Badge>
+      <Badge colorPalette="red">Removed</Badge>
+      <Badge colorPalette="purple">New</Badge>
+    </Stack>
+  )
+}
+
+
+EMPTY STATE
+import { EmptyState } from "@/components/ui/empty-state"
+import { LuShoppingCart } from "react-icons/lu"
+
+const Demo = () => {
+  return (
+    <EmptyState
+      icon={<LuShoppingCart />}
+      title="Your cart is empty"
+      description="Explore our products and add items to your cart"
+    />
+  )
+}
+
+
+PROGRESS CIRCLE
+import {
+  ProgressCircleRing,
+  ProgressCircleRoot,
+} from "@/components/ui/progress-circle"
+
+const Demo = () => {
+  return (
+    <ProgressCircleRoot value={75}>
+      <ProgressCircleRing />
+    </ProgressCircleRoot>
+  )
+}
+
+
+STAT
+import { StatLabel, StatRoot, StatValueText } from "@/components/ui/stat"
+
+const Demo = () => {
+  return (
+    <StatRoot>
+      <StatLabel>Unique visitors</StatLabel>
+      <StatValueText>192.1k</StatValueText>
+    </StatRoot>
+  )
+}
+
+TABLE
+import { Table } from "@chakra-ui/react"
+
+const Demo = () => {
+  return (
+    <Table.Root size="sm">
+      <Table.Header>
+        <Table.Row>
+          <Table.ColumnHeader>Product</Table.ColumnHeader>
+          <Table.ColumnHeader>Category</Table.ColumnHeader>
+          <Table.ColumnHeader textAlign="end">Price</Table.ColumnHeader>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+        {items.map((item) => (
+          <Table.Row key={item.id}>
+            <Table.Cell>{item.name}</Table.Cell>
+            <Table.Cell>{item.category}</Table.Cell>
+            <Table.Cell textAlign="end">{item.price}</Table.Cell>
+          </Table.Row>
+        ))}
+      </Table.Body>
+    </Table.Root>
+  )
+}
+
+const items = [
+  { id: 1, name: "Laptop", category: "Electronics", price: 999.99 },
+  { id: 2, name: "Coffee Maker", category: "Home Appliances", price: 49.99 },
+  { id: 3, name: "Desk Chair", category: "Furniture", price: 150.0 },
+  { id: 4, name: "Smartphone", category: "Electronics", price: 799.99 },
+  { id: 5, name: "Headphones", category: "Accessories", price: 199.99 },
+]
+
+
+INPUT
+import { Input } from "@chakra-ui/react"
+
+const Demo = () => {
+  return <Input placeholder="Enter your email" />
+}
+
+
+import { BsHeartPulse } from "react-icons/bs";
+import { FaTemperatureHalf } from "react-icons/fa6";
+import { BsLungs } from "react-icons/bs";
+import { BsGenderAmbiguous } from "react-icons/bs";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { CiMail } from "react-icons/ci";
+
+
+import { Chart } from "react-google-charts";
+
+function BloodPressureChart() {
+  const chartData = prepareChartData(userData);
+
+  return (
+    <Chart
+      chartType="LineChart"
+      width="100%"
+      height="400px"
+      data={chartData}
+      options={{
+        title: "Monthly Blood Pressure",
+        hAxis: { title: "Month" },
+        vAxis: { title: "Blood Pressure" },
+        legend: "none",
+      }}
+    />
+  );
+}
+
+export default BloodPressureChart;
+
+
+// Transform user data to chart-compatible format
+const prepareChartData = (data) => {
+  const bloodPressureData = [
+    ["Month", "Blood Pressure"] // Headers for the chart
+  ];
+
+  data[0].user.bloodPressureReadings.forEach((reading) => {
+    bloodPressureData.push([reading.month, reading.bloodPressure]);
+  });
+
+  return bloodPressureData;
+};
+
+// Prepare data
+const chartData = prepareChartData(userData);
+
+
+To structure your userData for the graph, you'll need to transform it into an array that the chart library can interpret, specifically with each item containing the month and blood pressure value. However, the given data only includes a single blood pressure reading, not a monthly series, so I’ll provide an example assuming you’ll have monthly readings in a similar format.
+
+Here's how to structure userData for react-google-chart:
+
+Expand userData to include multiple months of blood pressure readings (for a single user or multiple users).
+Format the transformed data into a format usable by the chart component, with each row containing the month and the blood pressure value.
+Here’s a sample approach:
+
+Step 1: Create Sample Monthly Data
+To plot a line chart over time, let's add hypothetical monthly blood pressure readings for a user.
+
+javascript
+Copy code
+export const userData = [
+  {
+    user: {
+      id: 1,
+      name: "Jack Doe",
+      age: 46,
+      height: 78,
+      weight: 89,
+      bloodPressureReadings: [
+        { month: "January", bloodPressure: 120 },
+        { month: "February", bloodPressure: 125 },
+        { month: "March", bloodPressure: 118 },
+        { month: "April", bloodPressure: 115 },
+        { month: "May", bloodPressure: 123 },
+        { month: "June", bloodPressure: 119 },
+        { month: "July", bloodPressure: 122 },
+        { month: "August", bloodPressure: 121 },
+        { month: "September", bloodPressure: 117 },
+        { month: "October", bloodPressure: 124 },
+        { month: "November", bloodPressure: 120 },
+        { month: "December", bloodPressure: 119 }
+      ]
+    },
+    summary: {
+      bmi: 45.9,
+      caloriesBurned: 600,
+      sleep: 5
+    }
+  }
+];
+Step 2: Prepare Data for the Chart
+Now, let’s transform userData so it’s formatted for react-google-chart with month and blood pressure.
+
+javascript
+Copy code
+// Transform user data to chart-compatible format
+const prepareChartData = (data) => {
+  const bloodPressureData = [
+    ["Month", "Blood Pressure"] // Headers for the chart
+  ];
+
+  data[0].user.bloodPressureReadings.forEach((reading) => {
+    bloodPressureData.push([reading.month, reading.bloodPressure]);
+  });
+
+  return bloodPressureData;
+};
+
+// Prepare data
+const chartData = prepareChartData(userData);
+Step 3: Use chartData in the Chart Component
+Here’s how you’d use chartData with react-google-charts:
+
+javascript
+Copy code
+import { Chart } from "react-google-charts";
+
+function BloodPressureChart() {
+  const chartData = prepareChartData(userData);
+
+  return (
+    <Chart
+      chartType="LineChart"
+      width="100%"
+      height="400px"
+      data={chartData}
+      options={{
+        title: "Monthly Blood Pressure",
+        hAxis: { title: "Month" },
+        vAxis: { title: "Blood Pressure" },
+        legend: "none",
+      }}
+    />
+  );
+}
+
+export default BloodPressureChart;
