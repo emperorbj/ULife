@@ -45,7 +45,7 @@ const Dashboard = () => {
                             {/* first */}
                             <Card.Root className="bg-green-100 shadow-md h-40 sm:h-48 
                             sm:w-[280px] md:h-48 lg:h-56 w-[140px] 
-                            md:w-[155px] lg:w-[180px] xl:w-[250px]">
+                            md:w-[155px] lg:w-[180px] xl:w-[200px]">
                                 <Card.Body className="mt-6" gap="1">
                                     <CircularProgress bmi={bmi}/>
                                     <Card.Title mt="1">
@@ -63,7 +63,7 @@ const Dashboard = () => {
                             {/* second */}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
                             bg-red-100 md:h-48 lg:h-56 w-[140px] 
-                            md:w-[155px] lg:w-[180px] xl:w-[250px]">
+                            md:w-[155px] lg:w-[180px] xl:w-[200px]">
                                 <Card.Body gap="1">
                                     <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] 
                                     bg-white 
@@ -83,7 +83,7 @@ const Dashboard = () => {
                             {/* third*/}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
                             bg-sky-100  md:h-48 lg:h-56 w-[140px] 
-                            md:w-[155px] lg:w-[180px] xl:w-[250px]">
+                            md:w-[155px] lg:w-[180px] xl:w-[200px]">
                                 <Card.Body gap="1">
                                 <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] bg-white 
                                     md:w-[90px] rounded-full">
@@ -102,7 +102,7 @@ const Dashboard = () => {
                             {/* fourth*/}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] bg-yellow-100 
                             md:h-48 
-                            lg:h-56 w-[140px] md:w-[155px] lg:w-[180px] xl:w-[250px]">
+                            lg:h-56 w-[140px] md:w-[155px] lg:w-[180px] xl:w-[200px]">
                                 <Card.Body gap="1">
                                     <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] 
                                     bg-white 
