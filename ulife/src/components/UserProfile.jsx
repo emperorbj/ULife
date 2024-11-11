@@ -15,7 +15,7 @@ const UserProfile = ({weight}) => {
     return (
         <div className="m-4 md:m-0 md:p-4">
             <Card.Root className="bg-sky-200 w-full">
-                <Card.Body gap="2" className="flex md:flex-row lg:flex-row sm:flex-col">
+                <Card.Body gap="2" className="flex md:flex-col lg:flex-col sm:flex-col">
                     <Avatar
                         src={user.user.image}
                         name="Nue Camp"
