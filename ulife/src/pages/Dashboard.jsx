@@ -44,7 +44,7 @@ const Dashboard = () => {
                         md:grid-cols-3 lg:grid-cols-4">
                             {/* first */}
                             <Card.Root className="bg-green-100 shadow-md h-40 sm:h-48 
-                            sm:w-[280px] md:h-48 lg:h-56 w-[140px] 
+                            sm:w-[280px] md:h-48 lg:h-[180px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body className="mt-6" gap="1">
                                     <CircularProgress bmi={bmi}/>
@@ -62,7 +62,7 @@ const Dashboard = () => {
                             </Card.Root>
                             {/* second */}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
-                            bg-red-100 md:h-48 lg:h-56 w-[140px] 
+                            bg-red-100 md:h-48 lg:h-[180px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body gap="1">
                                     <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] 
@@ -82,7 +82,7 @@ const Dashboard = () => {
                             </Card.Root>
                             {/* third*/}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
-                            bg-sky-100  md:h-48 lg:h-56 w-[140px] 
+                            bg-sky-100  md:h-48 lg:h-[180px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body gap="1">
                                 <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] bg-white 
