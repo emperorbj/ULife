@@ -55,10 +55,12 @@ const Home = () => {
             <DialogContent>
               <DialogHeader>
                 <DialogTitle>
-                  <h1 className='text-lg font-semibold'>Welcome valued Customer 😘!</h1></DialogTitle>
+                  <h1 className='text-lg font-semibold'>Let us help you check your BMI 😘!</h1></DialogTitle>
               </DialogHeader>
               <DialogBody className='px-10 flex flex-col gap-5'>
+                <label> Weight in cm</label>
                 <Input type='number' onChange={handleWeight} className='bg-slate-100 px-2' placeholder='Enter weight'/>
+                <label> Height in Kg</label>
                 <Input type='number' onChange={handleHeight} className='bg-slate-100 px-2' placeholder='Enter height'/>
               </DialogBody>
               <DialogFooter>

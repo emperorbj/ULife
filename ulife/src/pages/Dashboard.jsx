@@ -44,7 +44,7 @@ const Dashboard = () => {
                         md:grid-cols-3 lg:grid-cols-4">
                             {/* first */}
                             <Card.Root className="bg-green-100 shadow-md h-40 sm:h-48 
-                            sm:w-[280px] md:h-48 lg:h-[180px] w-[140px] 
+                            sm:w-[280px] md:h-48 lg:h-[200px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body className="mt-6" gap="1">
                                     <CircularProgress bmi={bmi}/>
@@ -53,7 +53,7 @@ const Dashboard = () => {
                                             BMI
                                         </h1>
                                         {bmi &&
-                                            <h1 className="text-[12px] md:text-[13px] lg:text-2xl font-bold">
+                                            <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-bold">
                                             {bmi}
                                             </h1>
                                         }
@@ -62,7 +62,7 @@ const Dashboard = () => {
                             </Card.Root>
                             {/* second */}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
-                            bg-red-100 md:h-48 lg:h-[180px] w-[140px] 
+                            bg-red-100 md:h-48 lg:h-[200px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body gap="1">
                                     <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] 
@@ -71,10 +71,10 @@ const Dashboard = () => {
                                         <FaHeartbeat className="text-red-500 h-[40px] w-[40px] md:h-[56px] md:w-[56px]"/>
                                     </div>
                                     <Card.Title mt="1">
-                                        <h1 className="text-[12px] md:text-[13px] lg:text-xl font-semibold">
+                                        <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-semibold">
                                             Heart Beat Rate
                                         </h1>
-                                        <h1 className="text-[12px] md:text-[13px] lg:text-2xl font-bold">
+                                        <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-bold">
                                             {user.summary.heartRate} BPM
                                         </h1>
                                     </Card.Title>
@@ -82,7 +82,7 @@ const Dashboard = () => {
                             </Card.Root>
                             {/* third*/}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] 
-                            bg-sky-100  md:h-48 lg:h-[180px] w-[140px] 
+                            bg-sky-100  md:h-48 lg:h-[200px] w-[140px] 
                             md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body gap="1">
                                 <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] bg-white 
@@ -90,10 +90,10 @@ const Dashboard = () => {
                                         <BsLungsFill className="text-sky-300 h-[40px] w-[40px] md:h-[56px] md:w-[56px]"/>
                                     </div>
                                     <Card.Title mt="1">
-                                    <   h1 className="text-[12px] md:text-[13px] lg:text-xl font-semibold">
+                                    <   h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-semibold">
                                             Respiratory Rate
                                         </h1>
-                                        <h1 className="text-[12px] md:text-[13px] lg:text-2xl font-bold">
+                                        <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-bold">
                                             {user.summary.respiratoryRate} BPM
                                         </h1>
                                     </Card.Title>
@@ -102,7 +102,7 @@ const Dashboard = () => {
                             {/* fourth*/}
                             <Card.Root className="shadow-md h-40 sm:h-48 sm:w-[280px] bg-yellow-100 
                             md:h-48 
-                            lg:h-56 w-[140px] md:w-[155px] lg:w-[180px] xl:w-[220px]">
+                            lg:h-[200px] w-[140px] md:w-[155px] lg:w-[180px] xl:w-[220px]">
                                 <Card.Body gap="1">
                                     <div className="flex items-center justify-center w-[50px] h-[50px] md:h-[90px] 
                                     bg-white 
@@ -110,10 +110,10 @@ const Dashboard = () => {
                                         <GiBurningDot className="text-orange-300 h-[40px] w-[40px] md:h-[56px] md:w-[56px]"/>
                                     </div>
                                     <Card.Title mt="1">
-                                        <h1 className="text-[12px] md:text-[13px] lg:text-xl font-semibold">
+                                        <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-semibold">
                                             Calories Burnt
                                         </h1>
-                                        <h1 className="text-[12px] md:text-[13px] lg:text-2xl font-bold">
+                                        <h1 className="text-[12px] md:text-[13px] lg:text-[17px] font-bold">
                                             {user.summary.caloriesBurned} cal
                                         </h1>
                                     </Card.Title>
