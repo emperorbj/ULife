@@ -10,6 +10,7 @@ import CircularProgress from "../components/CircularProgress"
 import { UserContext} from "../UserContext"
 import { useContext, useEffect, useState } from "react"
 
+
 const Dashboard = () => {
     const { height,weight } = useContext(UserContext)
     const[bmi,setBmi] = useState(null)
