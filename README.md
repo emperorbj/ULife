@@ -24,13 +24,13 @@ Make sure you have the following installed:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/emperorbj/foundry.
+   git clone https://github.com/emperorbj/ULife.
 ### Navigate Project Directory
 
 After cloning the repository, navigate to the project directory:
 
 ```bash
-cd foundry
+cd ulife
 
 ### Installing dependencies
 
